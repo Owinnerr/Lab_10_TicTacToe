@@ -20,7 +20,7 @@ public class Main {
                     row -= 1; // Subtract 1 from the row variable, so we convert the player move coordinates to the array indices (0-2)
                     col = SafeInput.getRangedInt(in, "Enter the column for the player " + player + ":", 1, 3); // Prompt the user for a column (between 1 and 3) for the game and use the getRangedInt method to make sure it is in that range, and set their response as a variable
                     col -= 1; // Subtract 1 from the row variable, so we convert the player move coordinates to the array indices (0-2)
-                    if(!isValidMove(row, col)) { // If not a valid move by the player (call the method isValidMove and set the parameters to the user input, and check if it's a valid move),
+                    if(!isValidMove(row, col)) { // Condition: If not a valid move by the player (call the method isValidMove and set the parameters to the user input, and check if it's a valid move),
                         System.out.println("Please enter a valid move that has not been taken already."); // Output that the user should enter a valid move
                     }
                 } while(!isValidMove(row, col)); // Loop: While there is not a valid move by the user (Loop until the converted player coordinates are a valid move)
